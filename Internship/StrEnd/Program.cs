@@ -12,22 +12,9 @@ namespace StrEnd
             Console.WriteLine($"Первая строка: {firstStr}");
             Console.WriteLine($"Вторая строка: {secondStr}");
             Console.Write("Первая строка заканчивается второй строкой: ");
-            Console.WriteLine(StrEnd(firstStr, secondStr));
+            Console.WriteLine(StringHelper.StrEnd(firstStr, secondStr));
 
             Console.ReadLine();
-
-            bool StrEnd(string firstStr, string secondStr)
-            {
-                firstStr = firstStr.Trim();
-                secondStr = secondStr.Trim();
-
-                if (firstStr.Length < secondStr.Length)
-                    return false;
-
-                var firstStrEnd = firstStr.Substring(firstStr.Length - secondStr.Length);
-
-                return firstStrEnd == secondStr;
-            }
         }
     }
 }
